@@ -1,0 +1,42 @@
+﻿@model PartyInvites;
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PARTYYY</title>
+</head>
+<body>
+    <div>
+        <div>
+           RSVPFORM
+        </div>
+        <form asp-action="RsvpForm" method="post">
+            <div>
+                <label asp-for="Name">Your Name:</label>
+                <input type="text" asp-for="Name"/>
+            </div>
+
+            <div>
+                <label asp-for="Email">Your Email:</label>
+                <input type="text" asp-for="Email"/>
+            </div>
+
+            <div>
+                <label asp-for="Phone">Your Phone:</label>
+                <input type="number" asp-for="Phone"/>
+            </div>
+
+            <div>
+                <label asp-for="WillAttend">Will Attend?:</label>
+                <select asp-for="WillAttend">
+                    <option value="">Choose</option>
+                    <option value="True">Yes, I Will Attend</option>
+                    <option value="False">No, I Will Attend</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
